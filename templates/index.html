@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1>AVL Dictionary</h1>
+    <p class="lead">Dictionaries map words to their definition.
+    So, a dictionary can be implemented by maping two sets A and B where the input member A is mapped to the output member B.
+    This mapping can be done by a searching algorithm. AVL tree which is a self-balancing binary search tree, is used as the searching algorithm in this project.
+    The searching algorithm matches the output member B for the given input member A.</p>
+</div>
+
+<div class="row" style="margin-bottom:50px;">
+    <div class="col-md-3"></div>
+    <div class="col-md-3">
+        Word
+        <input type="text" id="word"/>
+        <a class="fas fa-search button-icon" id="searchBtn"></a>
+        <a class="fas fa-plus button-icon" id="addBtn"></a>
+        <a class="fas fa-trash button-icon" id="deleteBtn"></a>
+        <a class="fas fa-ban button-icon" id="resetBtn"></a>
+        <a class="fas fa-list button-icon" id="listBtn"></a>
+    </div>
+    <div class="col-md-3">
+        Meaning: 
+        <input type="text" id="meaning"/>
+    </div>
+</div>
+
+<div class="row" style="border:1px;">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <p id="tree"></p>
+    </div>
+</div>
+
+
+{% endblock %}
